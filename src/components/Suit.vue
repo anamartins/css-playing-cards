@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ suit: string; color: string }>();
+defineProps<{ suit: string }>();
 </script>
 
 <template>
