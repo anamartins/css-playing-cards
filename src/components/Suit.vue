@@ -50,9 +50,7 @@ defineProps<{ suit: string }>();
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  box-shadow:
-    -5px 8px black,
-    5px 8px black;
+  box-shadow: -5px 8px black, 5px 8px black;
 }
 
 .clubs:after {

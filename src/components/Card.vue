@@ -7,17 +7,29 @@ defineProps<{ suit: string; rank: string; color: string }>();
 
 <template>
   <div class="card">
-    <Rank :rank="rank" :color="color" />
-    <Suit :suit="suit" />
+    <div class="corner top-left">
+      <Rank :rank="rank" :color="color" />
+      <Suit :suit="suit" />
+    </div>
+
+    <div class="middle">
+      <div class="content" v-if="Number.isInteger(parseInt(rank))">
+        <div v-for="i in parseInt(rank)"><Suit :suit="suit" /></div>
+      </div>
+    </div>
+    <div class="corner bottom-right">
+      <Rank :rank="rank" :color="color" />
+      <Suit :suit="suit" />
+    </div>
   </div>
 </template>
 
 <style scoped>
 .card {
-  width: 7rem;
-  height: 10rem;
+  width: 8rem;
+  height: 11rem;
   margin: 1rem;
-  padding: 0.8rem 1rem;
+  padding: 0.3rem;
   background: #fff;
   border: 1px solid #999;
   border-radius: 5px;
@@ -28,5 +40,20 @@ defineProps<{ suit: string; rank: string; color: string }>();
 
 .card:hover {
   margin: 0.5rem 1rem;
+}
+
+.middle {
+  background: pink;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
 }
 </style>
