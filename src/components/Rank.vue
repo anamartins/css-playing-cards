@@ -1,19 +1,16 @@
 <script setup lang="ts">
-defineProps<{ rank: string; color: string }>();
+defineProps<{ rank: string; color: string; isInverted: boolean }>();
 </script>
 
 <template>
-  <div class="rank" :class="color">{{ rank }}</div>
+  <div class="rank" :class="color">
+    {{ rank }}
+  </div>
 </template>
 
 <style scoped>
 .rank {
   font-size: 2rem;
-  margin-left: 3px;
-}
-
-.inverted {
-  transform: rotate(180deg);
 }
 
 .red {
