@@ -10,26 +10,27 @@ defineProps<{ suit: string }>();
 .diamonds {
   background: red;
   position: relative;
-  margin: 2px 5px;
-  width: 18px;
-  height: 18px;
+  margin: 7px 5px;
+  width: 12px;
+  height: 12px;
   transform: rotate(45deg);
 }
 
 .hearts {
   position: relative;
-  width: 18px;
-  height: 18px;
+  padding: 5px;
+  width: 15px;
+  height: 15px;
 }
 
 .hearts:before,
 .hearts:after {
   position: absolute;
   content: "";
-  left: 13px;
+  left: 12px;
   top: 0;
-  width: 13px;
-  height: 21px;
+  width: 8px;
+  height: 13px;
   background: red;
   border-radius: 50px 50px 0 0;
   transform: rotate(-45deg);
@@ -37,7 +38,7 @@ defineProps<{ suit: string }>();
 }
 
 .hearts:after {
-  left: 0;
+  left: 5px;
   transform: rotate(45deg);
   transform-origin: 100% 100%;
   background: red;
@@ -46,18 +47,18 @@ defineProps<{ suit: string }>();
 .clubs {
   background: black;
   position: relative;
-  margin: 2px 5px 10px;
-  width: 12px;
-  height: 12px;
+  margin: 7px 9px 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  box-shadow: -5px 8px black, 5px 8px black;
+  box-shadow: -4px 5px black, 4px 5px black;
 }
 
 .clubs:after {
   position: absolute;
   content: "";
-  top: 5px;
-  left: 3px;
+  top: -2px;
+  left: 1px;
   width: 0;
   height: 0;
   border-bottom: 10px solid black;
@@ -68,21 +69,21 @@ defineProps<{ suit: string }>();
 
 .spades {
   position: relative;
-  margin: 10px 10px 5px;
-  width: 8px;
-  height: 10px;
+  margin: 5px 7px 5px 10px;
+  width: 5px;
+  height: 9px;
   transform: rotate(180deg);
-  box-shadow: 3px -7px 0 -1px black;
+  box-shadow: 2px -7px 0 -1px black;
 }
 
 .spades:before,
 .spades:after {
   position: absolute;
   content: "";
-  left: 7px;
+  left: 4px;
   top: 0;
-  width: 12px;
-  height: 20px;
+  width: 9px;
+  height: 13px;
   background: black;
   border-radius: 50px 50px 0 0;
   transform: rotate(-45deg);

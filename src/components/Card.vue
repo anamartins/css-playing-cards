@@ -14,7 +14,7 @@ defineProps<{ suit: string; rank: string; color: string }>();
 
     <div class="middle">
       <div class="content" v-if="Number.isInteger(parseInt(rank))">
-        <div v-for="i in parseInt(rank)"><Suit :suit="suit" /></div>
+        <Suit v-for="i in parseInt(rank)" :suit="suit" :class="rank" />
       </div>
     </div>
     <div class="corner bottom-right">
@@ -26,6 +26,7 @@ defineProps<{ suit: string; rank: string; color: string }>();
 
 <style scoped>
 .card {
+  display: flex;
   width: 8rem;
   height: 11rem;
   margin: 1rem;
@@ -45,15 +46,25 @@ defineProps<{ suit: string; rank: string; color: string }>();
 .middle {
   background: pink;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 2rem);
+  margin: 1rem 0;
+  display: flex;
 }
 
 .content {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
+  justify-content: space-around;
+  align-content: space-around;
+}
+.corner {
+  margin-left: 0;
+  margin-right: 10px;
+}
+.bottom-right {
+  transform: rotate(180deg);
+  margin-right: 0;
+  margin-left: 10px;
 }
 </style>

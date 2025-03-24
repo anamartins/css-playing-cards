@@ -10,7 +10,8 @@ defineProps<{ rank: string; color: string; isInverted: boolean }>();
 
 <style scoped>
 .rank {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 .red {

@@ -1,5 +1,5 @@
 .card {
-    display: grid;
+    /* display: grid;
     grid-template-rows: 25%;
     grid-template-columns: 20%;
     grid-template-areas:
@@ -7,19 +7,11 @@
       "top middle middle ."
       ". middle middle ."
       ". middle middle bottom"
-      ". . . bottom";
+      ". . . bottom"; */
 }
 
-.middle {
+/* .middle {
     grid-area: middle;
-}
-
-.rank {
-    grid-area: rank;
-}
-
-.suit {
-    grid-area: suit;
 }
 
 .top-left {
@@ -28,5 +20,5 @@
 
 .bottom-right {
     grid-area: bottom;
-    transform: rotate(180deg);
-}
+    
+} */
