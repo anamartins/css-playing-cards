@@ -1,0 +1,24 @@
+.card {
+    /* display: grid;
+    grid-template-rows: 25%;
+    grid-template-columns: 20%;
+    grid-template-areas:
+      "top .  . ."
+      "top middle middle ."
+      ". middle middle ."
+      ". middle middle bottom"
+      ". . . bottom"; */
+}
+
+/* .middle {
+    grid-area: middle;
+}
+
+.top-left {
+    grid-area: top;
+}
+
+.bottom-right {
+    grid-area: bottom;
+    
+} */
