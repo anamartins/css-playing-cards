@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Suit from "./Suit.vue";
 import Rank from "./Rank.vue";
-import LetterContent from "./LetterContent.vue";
 
 defineProps<{ suit: string; rank: string; color: string }>();
 </script>
@@ -16,12 +15,6 @@ defineProps<{ suit: string; rank: string; color: string }>();
     <div class="middle">
       <div class="content" v-if="Number.isInteger(parseInt(rank))">
         <Suit v-for="i in parseInt(rank)" :suit="suit" :class="rank" />
-      </div>
-      <div class="content" v-else-if="rank === 'A'">
-        <Suit :suit="suit" :class="rank" />
-      </div>
-      <div class="content" v-else>
-        <LetterContent :color="color" :letter="rank.toLowerCase()" />
       </div>
     </div>
     <div class="corner bottom-right">
