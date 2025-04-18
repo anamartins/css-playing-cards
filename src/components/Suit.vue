@@ -20,7 +20,7 @@ defineProps<{ suit: string }>();
   position: relative;
   padding: 5px;
   width: 15px;
-  height: 15px;
+  height: 5px;
 }
 
 .hearts:before,
@@ -47,7 +47,7 @@ defineProps<{ suit: string }>();
 .clubs {
   background: black;
   position: relative;
-  margin: 7px 9px 10px;
+  margin: 0px 9px 10px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -69,18 +69,18 @@ defineProps<{ suit: string }>();
 
 .spades {
   position: relative;
-  margin: 5px 7px 5px 10px;
+  margin: 10px 11px 10px 7px;
   width: 5px;
   height: 9px;
   transform: rotate(180deg);
-  box-shadow: 2px -7px 0 -1px black;
+  box-shadow: -2px -7px 0px -1px black;
 }
 
 .spades:before,
 .spades:after {
   position: absolute;
   content: "";
-  left: 4px;
+  left: 0;
   top: 0;
   width: 9px;
   height: 13px;
@@ -91,7 +91,7 @@ defineProps<{ suit: string }>();
 }
 
 .spades:after {
-  left: -5px;
+  left: -8px;
   transform: rotate(45deg);
   background: black;
   transform-origin: 100% 100%;
