@@ -31,8 +31,7 @@ defineProps<{ suit: string; rank: string; color: string }>();
           <Suit :suit="suit" />
         </div>
       </div>
-      <div class="card-back">
-        <div class="checkers"></div>
+      <div class="card-back checkers">
       </div>
     </div>
   </div>
@@ -113,19 +112,20 @@ defineProps<{ suit: string; rank: string; color: string }>();
 }
 
 .checkers {
-  width: 1rem;
-  height: 1rem;
-  background-color: #fff;
-  box-shadow: 2rem 0 #fff, 4rem 0 #fff, 6rem 0 #fff,
-    1rem 1rem #fff, 3rem 1rem #fff, 5rem 1rem #fff, 7rem 1rem #fff,
-    0rem 2rem #fff, 2rem 2rem #fff, 4rem 2rem #fff, 6rem 2rem #fff,
-    1rem 3rem #fff, 3rem 3rem #fff, 5rem 3rem #fff, 7rem 3rem #fff,
-    0rem 4rem #fff, 2rem 4rem #fff, 4rem 4rem #fff, 6rem 4rem #fff,
-    1rem 5rem #fff, 3rem 5rem #fff, 5rem 5rem #fff, 7rem 5rem #fff,
-    0rem 6rem #fff, 2rem 6rem #fff, 4rem 6rem #fff, 6rem 6rem #fff,
-    1rem 7rem #fff, 3rem 7rem #fff, 5rem 7rem #fff, 7rem 7rem #fff,
-    0rem 8rem #fff, 2rem 8rem #fff, 4rem 8rem #fff, 6rem 8rem #fff,
-    1rem 9rem #fff, 3rem 9rem #fff, 5rem 9rem #fff, 7rem 9rem #fff,
-    0rem 10rem #fff, 2rem 10rem #fff, 4rem 10rem #fff, 6rem 10rem #fff;
+   background: repeat left 0 top 0 
+    repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 10px,
+      white 10px,
+      white 20px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 10px,
+      white 10px,
+      white 20px
+    ), deeppink;
 }
 </style>
