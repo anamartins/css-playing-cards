@@ -72,6 +72,7 @@ defineProps<{ suit: string; rank: string; color: string }>();
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform-style: preserve-3d;
+  border-radius: 5px;
 }
 
 .card-front {
